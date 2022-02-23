@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojo Weather</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="header flex-row">
+        <h1 class="header__title">DojoWeather</h1>
+        <nav class="header__nav">
+            <ul class=" header__list flex-row">
+                <li onclick="alertFunction()">Burbank</li>
+                <li onclick="alertFunction()">Chicago</li>
+                <li onclick="alertFunction()">Dallas</li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main">
+        <section class="main__first-section flex-row">
+            <h2 class="main__place">San Jose</h2>
+            <article class="main__type-of-temperature flex-row">
+                <p class="main__description">show temperature in</p>
+                <div class="main__input">
+                    <select class="main__select flex-row" name="temperature" onchange="changeTemperature(this)">
+                        <option value="C">°C</option>
+                        <option value="F">°F</option>
+                    </select>
+                </div>
+            </article>
+        </section>
+        <section class="main__second-section flex-row">
+            <article class="days flex-column">
+                <h2 class="days__title">Today</h2>
+                <img class="days__img" src="assets/images/some_rain.png" alt="rain-image">
+                <p class="days__description">some rain</p>
+                <div class="days__min-max flex-row">
+                    <div class="days__max" id="temp-1">24°</div>
+                    <div class="days__min" id="temp-2">18°</div>
+                </div>
+            </article>
+            <article class="days flex-column">
+                <h2 class="days__title">Tomorrow</h2>
+                <img class="days__img" src="assets/images/some_sun.png" alt="sum-image">
+                <p class="days__description">some sun</p>
+                <div class="days__min-max flex-row">
+                    <div class="days__max" id="temp-3">27°</div>
+                    <div class="days__min" id="temp-4">19°</div>
+                </div>
+            </article>
+            <article class="days flex-column">
+                <h2 class="days__title">Friday</h2>
+                <img class="days__img" src="assets/images/some_clouds.png" alt="clouds-image">
+                <p class="days__description">some clouds</p>
+                <div class="days__min-max flex-row">
+                    <div class="days__max" id="temp-5">21°</div>
+                    <div class="days__min" id="temp-6">16°</div>
+                </div>
+            </article>
+            <article class="days flex-column">
+                <h2 class="days__title">Saturday</h2>
+                <img class="days__img" src="assets/images/some_sun.png" alt="sum-image">
+                <p class="days__description">some sun</p>
+                <div class="days__min-max flex-row">
+                    <div class="days__max" id="temp-7">26°</div>
+                    <div class="days__min" id="temp-8">11°</div>
+                </div>
+            </article>
+        </section>
+    </main>
+    <footer class="footer">
+        <section class="footer__section flex-row"> 
+            <div class="t flex-row">
+                <img src="/assets/images/cookie.png" alt="cookie-img" class="footer__img">
+                <div class="footer__description">
+                    <h3>Stop! Cookie time</h3>
+                    <p>We use cookies (sadly not the edible ones) to personalize content and ads, to provide social media features and to analize our traffic. <a href="#">Read more...</a></p>
+                </div>
+            </div>
+            <button class="footer__button" onclick="dismissCookie(this)">I Accept</button>
+        </section>
+    </footer>
+    
+    <!-- Template -->
+    <template id="loeading-announcement">
+        <section class="loading-section">
+            <h2>This page says</h2>
+            <p>Loading weather report...</p>
+            <div>OK</div>
+        </section>
+    </template>
+    <script src="/src/index.js"></script>
+</body>
+</html>
